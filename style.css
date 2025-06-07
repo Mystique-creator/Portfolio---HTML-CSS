@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Comfortaa:wght@300..700&display=swap');
+
+:root {
+    --subhead: 28px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 11px;
+    margin-top: 13px;
+    flex-wrap: wrap;
+}
+
+.navbar h1 {
+    font-size: 33px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 47px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.about {
+    height: 275px;
+    border: 1px solid white;
+    background-color: hsl(201, 96%, 90%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.left-about {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.left-about .img {
+    width: 233px;
+    height: 233px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.right-about {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.right-about h1 {
+    font-size: var(--subhead);
+}
+
+.project h1 {
+    font-size: var(--subhead);
+    padding: 24px;
+    margin: 7px;
+    text-align: center;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+    margin: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project1 {
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(201, 68%, 90%);
+    padding-bottom: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.project1 img {
+    width: 100%;
+    height: auto;
+    max-height: 213px;
+    margin: 16px;
+    object-fit: contain;
+}
+
+.project1 p {
+    padding: 6px 20px;
+    font-size: 16px;
+}
+
+.project1 h3 {
+    margin-top: 21px;
+    font-weight: 600;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 320px;
+    border: 2px solid white;
+    background-color: hsl(201, 88%, 84%);
+    padding: 20px;
+}
+
+.contact h1 {
+    margin-top: 12px;
+    font-size: var(--subhead);
+    text-align: center;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 15px;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    font-size: 17px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact textarea {
+    font-size: 16px;
+}
+
+/* Tablet (Medium devices) */
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-about, .right-about {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-about {
+        align-items: center;
+    }
+
+    .project-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #form-container {
+        width: 80%;
+    }
+}
+
+/* Mobile (Small devices) */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+        align-items: center;
+    }
+
+    ul li {
+        border-bottom: 1px solid grey;
+        padding-bottom: 5px;
+    }
+
+    .about {
+        flex-direction: column;
+        min-height: 600px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .left-about, .right-about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-about .img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .project-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project1 {
+        width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+    }
+
+    #form-container {
+        width: 95%;
+        padding: 10px;
+    }
+}
